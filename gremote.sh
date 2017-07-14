@@ -20,7 +20,8 @@ case $1 in
 ------------------------------------ gremote ------------------------------------
          Open the configured remote url for your current repo, whether 
          it be SSH or HTTPS, directly from the terminal.
-
+         
+		 Licensed under the MIT License (MIT)
          Copyright (c) 2017 cognophile (https://github.com/cognophile)
 
          To display help, use the '-h' or '--help' option.
