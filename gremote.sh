@@ -68,12 +68,17 @@ stripSsh ()
 openUrl ()
 {
 	local url=$1
-	
+    local os=$(uname)
+
 	if [[ -z $url ]]; then
 		echo "ERROR: The URL cannot be opened."
 		exit 1
 	else 
-		xdg-open $url
+		if [[ $os == "Darwin" ]]; then
+            open $url
+        else 
+            xdg-open $url
+        fi
 	fi
 }
 
@@ -85,8 +90,8 @@ convertToHttps ()
     local urlNoSsh=$(stripSsh $remote)	
 	
     local url="${httpsPrefix}${urlNoSsh}"
-
-	openUrl $url
+    
+    openUrl $url
 }
 
 # Entry point after function declarations 
