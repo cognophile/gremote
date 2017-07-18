@@ -32,7 +32,7 @@ esac
 case $1 in
  -[v] | --version)
     cat <<-versionDoc
-    gremote version: 1.0
+    gremote version: 1.1.0
 	versionDoc
         exit 0;;
 esac
